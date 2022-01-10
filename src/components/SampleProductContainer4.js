@@ -1,19 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
-import { buyCake } from "../redux";
+import { addToCart } from "../redux";
 
-const HooksCakeContainer = () => {
-  const numberOfCakes = useSelector(({ cake }) => cake.numberOfCakes);
-
+const SampleProductContainer4 = () => {
+  const cart_item = useSelector(({ cart_item }) => cart.cart_item);
   const dispatch = useDispatch``;
-
-  const handleClick = () => dispatch(buyCake());
-
+  const handleClick = () => dispatch(addToCart());
   return (
     <div>
-      <h2>(Hooks)Number of cakes - {numberOfCakes}</h2>
-      <button onClick={handleClick}>(Hooks) buy cake</button>
+      <h2>Item Count - {cart_item}</h2>
+      <button onClick={handleClick}>Add To Cart</button>
     </div>
   );
 };
 
-export default HooksCakeContainer;
+export default SampleProductContainer4;

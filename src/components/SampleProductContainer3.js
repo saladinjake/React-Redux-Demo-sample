@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
-import { fetchUsers } from "../redux";
+import { getRandomUsers } from "../redux";
 
-const SampleProductContainer3 = ({ data, fetchUsers }) => {
+const SampleProductContainer3 = ({ data, getRandomUsers }) => {
   // const dispatch = useDispatch();
   // const data = useSelector(({ users }) => users);
 
   useEffect(() => {
-    fetchUsers();
-  }, [fetchUsers]);
+    getRandomUsers();
+  }, [getRandomUsers]);
 
   return data.loading ? (
     <h1>loading...</h1>
@@ -28,4 +28,4 @@ const mapDispatchToProps = (dispatch) => ({
   fetchUsers: () => dispatch(fetchUsers()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UsersContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SampleProductContainer3);

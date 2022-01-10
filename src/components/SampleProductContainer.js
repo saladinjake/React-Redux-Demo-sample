@@ -1,22 +1,22 @@
 import React from "react";
 import { connect } from "react-redux";
-import { buyCake } from "../redux";
+import { cart } from "../redux";
 
-const SampleProductContainer = ({ numberOfCakes, buyCake }) => {
+const SampleProductContainer = ({ numberOfItems, addToCart }) => {
   return (
     <div>
-      <h2>number of cakes - {numberOfCakes}</h2>
-      <button onClick={buyCake}>Buy cake</button>
+      <h2>Total Items - {numberOfItems}</h2>
+      <button onClick={addToCart}>Add To Cart</button>
     </div>
   );
 };
 
-const mapStateToProps = ({ cake }) => ({
-  numberOfCakes: cake.numberOfCakes,
+const mapStateToProps = ({ cart }) => ({
+  cart_item: cart.cart_item,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  buyCake: () => dispatch(buyCake()),
+  addToCart: () => dispatch(addToCart()),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CakeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SampleProductContainer);
