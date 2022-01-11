@@ -22,10 +22,12 @@ export const getRandomUsers = () => async (dispatch) => {
     const { data } = await axios.get(
       "https://jsonplaceholder.typicode.com/users"
     );
+    //console.log(data)
     const users = data.map((user) => ({ id: user.id }));
-
+   
     dispatch(fetchSuccess(users));
   } catch (error) {
+    console.log(error.message)
     dispatch(fetchFailure(error.message));
   }
 };

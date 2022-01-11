@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../redux";
 
 const SampleProductContainer4 = () => {
-  const cart_item = useSelector(({ cart_item }) => cart.cart_item);
+  const cart_item = useSelector(({ cart }) => cart.cart_item);
   const dispatch = useDispatch``;
   const handleClick = () => dispatch(addToCart());
   return (

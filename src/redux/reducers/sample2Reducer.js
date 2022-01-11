@@ -6,7 +6,7 @@ const initialState = {
 
 const wishlistReducer = (state = initialState, action) => {
   switch (action.type) {
-    case BUY_ICE_CREAM:
+    case ADD_TO_WISHLIST:
       return {
         ...state,
         wishlist_items: state.wishlist_items + 1,

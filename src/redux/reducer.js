@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import sample1Reducer from "./reducers/cartReducer";
-import sample2Reducer from "./reducers/wishlistReducer";
-import sample3Reducer from "./reducers/userReducer";
+import cartReducer from "./reducers/sample1Reducer";
+import wishlistReducer from "./reducers/sample2Reducer";
+import userReducer from "./reducers/sample3Reducer";
 
 const reducer = combineReducers({
   cart: cartReducer,

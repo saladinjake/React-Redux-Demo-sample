@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addToWish } from "../redux";
+import { addToWishList } from "../redux";
 
 const SampleProductContainer2 = ({ wishlist_items, addToWishList }) => {
   return (
