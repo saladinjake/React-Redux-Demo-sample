@@ -6,7 +6,7 @@ import userReducer from "./reducers/sample3Reducer";
 const reducer = combineReducers({
   cart: cartReducer,
   wishlist: wishlistReducer,
-  user: userReducer,
+  users: userReducer,
 });
 
 export default reducer;
